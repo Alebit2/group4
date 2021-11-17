@@ -1,0 +1,14 @@
+Hello everyone! This is a quick shpeel about the point we're at with the project so far.
+We have two main options for now:
+- Improved turnitin
+- Interactive test (question bank)
+We need to keep in mind that the most outlandish idea usually yields the highest marks, if executed correctly. However, we are not expert programers and Dr. Martin himself said he'd go for the
+interactive test. So, make of that what you will.
+
+I think the best course of action for now would be to meet up, once the biopython assessment is over, and draw out the general structure of our program. From there, we'll start laying down the 
+foundational code which will then be imrpoved upon over time.
+
+-Ale
+
+Graphical interfaces:
+- TK inter.

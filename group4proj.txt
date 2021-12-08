@@ -51,7 +51,7 @@ class undergraduate:
     
 
     
-ungrd_1 = undergraduate('Biochemistry', '5 years', 'includes 1 year in industry', 'study of life at the molecular level', 'no joint degrees', 'includes lab work')
+ungrd_1 = undergraduate('Biochemistry', '4 years', 'no years in industry', 'study of life at the molecular level', 'no joint degrees', 'includes lab work')
 ungrd_2 = undergraduate('Biological and Biomedical Sciences', '4 years', 'no years in industry', 'general focus on biology and medicine', 'joint degree with National University of Singapore', 'includes lab work')
 ungrd_3 = undergraduate('Biological chemistry and drug discovery', '5 years', 'includes 1 year in industry', 'chemical biology and organic chemistry', 'no joint degrees', 'includes lab work')
 ungrd_4 = undergraduate('Biological chemistry and drug discovery', '4 years', 'no year in industry', 'chemical biology and organich chemistry', 'no joint degrees', 'includes lab work')

@@ -2,4 +2,68 @@ BS21010 Assignment 3
 
 Alessandro, Elisabeth, Esma and Raz
 
+CODE FOR CLASSES SET UP:
+
+courses_list = [ungrd_1, ungrd_2, ungrd_3, ungrd_4, ungrd_5, ungrd_6, ungrd_7, ungrd_8, ungrd_9]
+class undergraduate:
+    def __init__(self, name, duration, year_in_industry, area_of_expertise, joint_degree, lab_work):
+        """this class contains 6 parameters that define the instance's name, duration, whether or not it includes
+        a year i industry, which subjects(arguments the course focuses on, whether or not it offers a joint digree
+        with another university and whether lab work is included in the course or not"""
+        self.name = name
+        self.duration = duration
+        self.year_in_industry = year_in_industry
+        self.area_of_expertise = area_of_expertise
+        self.joint_degree = joint_degree
+        self.lab_work = lab_work
+    def course_description(self):
+        return '{}, {}, {}, {}, {}, {}'.format(self.name, self.duration, self.year_in_industry, self.area_of_expertise, self.joint_degree, self.lab_work)
+    def printout_names():
+        b=0
+        while b<=8:
+            print(courses_list[b].name)
+            b=b+1
+    def printout_duration():
+        a=0
+        while a<=8:
+            print(courses_list[a].duration)
+            a=a+1
+    def printout_yii():
+        c=0
+        while c<=8:
+            print(courses_list[c].year_in_industry)
+            c=c+1
+    def printout_aoe():    
+        d=0
+        while d<=8:
+            print(courses_list[d].area_of_expertise)
+            d=d+1
+    def printout_jd():
+        e=0
+        while e<=8:
+            print(courses_list[e].joint_degree)
+            e=e+1
+    def printout_lw():
+        f=0
+        while f<=8:
+            print(courses_list[f].lab_work)
+            f=f+1
+    
+
+    
+ungrd_1 = undergraduate('Biochemistry', '4 years', 'includes 1 year in industry', 'study of life at the molecular level', 'no joint degrees', 'includes lab work')
+ungrd_2 = undergraduate('Biological and Biomedical Sciences', '4 years', 'no years in industry', 'general focus on biology and medicine', 'joint degree with National University of Singapore', 'includes lab work')
+ungrd_3 = undergraduate('Biological chemistry and drug discovery', '5 years', 'includes 1 year in industry', 'chemical biology and organic chemistry', 'no joint degrees', 'includes lab work')
+ungrd_4 = undergraduate('Biological chemistry and drug discovery', '4 years', 'no year in industry', 'chemical biology and organich chemistry', 'no joint degrees', 'includes lab work')
+ungrd_5 = undergraduate('Biological sciences', '5 years', 'includes 1 year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work')
+ungrd_6 = undergraduate('Biological sciences', '4 years', 'no year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work')
+ungrd_7 = undergraduate('Microbiology', '4 years', 'no year in industry', 'focus on the biology of micro-organisms that are unicellular, multicellular or acellular', 'no joint degree', 'includes lab work')
+ungrd_8 = undergraduate('Molecular biology', '4 years', 'no year in industry', 'looks at how macro-molecules like proteins and nucleic acids can help solve biological problems', 'no joint degree', 'includes lab work')
+ungrd_9 = undergraduate('Molecular genetics', '4 years', 'no year in industry', 'study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively', 'no joint degree', 'includes lab work')
+
+#print(ungrd_5.name)
+#print(undergrad_2.joint_degree)
+#print(undergraduate.course_description(ungrd_1))
+print(undergraduate.printout_lw())
+
 

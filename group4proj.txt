@@ -110,4 +110,10 @@ entry3.grid(row=16, column=0, sticky=W)
 
 window.mainloop()
 
-print(answers)
+responce = {
+    'Q1':answers[0],
+    'Q2':answers[1],
+    'Q3':answers[2]
+}
+
+print(responce)

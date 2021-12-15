@@ -132,7 +132,7 @@ if responce['Q2'] == 'yes':
     print(ungrd_2.name,'(',ungrd_2.duration,') may be right for you')
 if responce['Q3'] == '1':
     print(ungrd_1.name, '(',ungrd_1.duration,') may be right for you')
-if responce['Q3'] == '2':
+if responce['Q3'] == '2'and responce['Q2'] == 'no':
     print(ungrd_2.name, '(',ungrd_2.duration,') may be right for you')
 if responce['Q3'] == '3'and responce['Q1'] == 'no':
     print(ungrd_4.name, '(',ungrd_4.duration,') may be right for you')

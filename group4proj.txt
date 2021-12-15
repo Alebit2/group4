@@ -118,7 +118,6 @@ responce = {
 print(responce)
 
 
-
 POTENTIAL CODE FOR RESULT		
 
 if responce['Q1'] == 'yes'and responce['Q3'] != '3'and responce['Q3'] !='4':

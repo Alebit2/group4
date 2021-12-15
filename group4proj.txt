@@ -4,7 +4,7 @@ Alessandro, Elisabeth, Esma and Raz
 
 CODE FOR CLASSES SET UP:
 
-courses_list = [ungrd_1, ungrd_2, ungrd_3, ungrd_4, ungrd_5, ungrd_6, ungrd_7, ungrd_8, ungrd_9]
+
 class undergraduate:
     def __init__(self, name, duration, year_in_industry, area_of_expertise, joint_degree, lab_work):
         """this class contains 6 parameters that define the instance's name, duration, whether or not it includes
@@ -60,6 +60,8 @@ ungrd_6 = undergraduate('Biological sciences', '4 years', 'no year in industry',
 ungrd_7 = undergraduate('Microbiology', '4 years', 'no year in industry', 'focus on the biology of micro-organisms that are unicellular, multicellular or acellular', 'no joint degree', 'includes lab work')
 ungrd_8 = undergraduate('Molecular biology', '4 years', 'no year in industry', 'looks at how macro-molecules like proteins and nucleic acids can help solve biological problems', 'no joint degree', 'includes lab work')
 ungrd_9 = undergraduate('Molecular genetics', '4 years', 'no year in industry', 'study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively', 'no joint degree', 'includes lab work')
+
+courses_list = [ungrd_1, ungrd_2, ungrd_3, ungrd_4, ungrd_5, ungrd_6, ungrd_7, ungrd_8, ungrd_9]
 
 #print(ungrd_5.name)
 #print(undergrad_2.joint_degree)
@@ -117,29 +119,96 @@ responce = {
 
 print(responce)
 
+# Tk inter as its own class
 
-POTENTIAL CODE FOR RESULT		
+# Make your application a class that can then use self to reference all the variables and methods. This is then self contained when run with mainloop()
+import tkinter
+class myApp (tkinter.Tk):
+    class undergraduate:
+        def __init__(self):
+            self.courseslist = [
+            undergraduate('Biochemistry', '4 years', 'no years in industry', 'study of life at the molecular level', 'no joint degrees', 'includes lab work'),
+            undergraduate('Biological and Biomedical Sciences', '4 years', 'no years in industry', 'general focus on biology and medicine', 'joint degree with National University of Singapoore', 'includes lab work'),
+            undergraduate('Biological chemistry and drug discovery', '5 years', 'includes 1 year in industry', 'chemical biology and organic chemistry', 'no joint degrees', 'includes lab work'),
+            undergraduate('Biological chemistry and drug discovery', '4 years', 'no year in industry', 'chemical biology and organich chemistry', 'no joint degrees', 'includes lab work'),
+            undergraduate('Biological sciences', '5 years', 'includes 1 year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work'),
+            undergraduate('Biological sciences', '4 years', 'no year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work'),
+            undergraduate('Microbiology', '4 years', 'no year in industry', 'focus on the biology of micro-organisms that are unicellular, multicellular or acellular', 'no joint degree', 'includes lab work'),
+            undergraduate('Molecular biology', '4 years', 'no year in industry', 'looks at how macro-molecules like proteins and nucleic acids can help solve biological problems', 'no joint degree', 'includes lab work'),
+            undergraduate('Molecular genetics', '4 years', 'no year in industry', 'study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively', 'no joint degree', 'includes lab work')
+ 
+            ]
+            self.answers=[]
+        # Even better would be to read this in from a file.
+ 
+            self.title('BSc (Hons) Biological Sciences Degree Finder (Dundee)')
+        #  now set up the buttons etc.
+            self.enter_button = tkinter.Button (self, text='ENTER', width=10, command=self.click).grid(row=17, column=0)
+ 
+            self.Q1 = tkinter.Label (self, text='Does a year in industry intrest you?').grid(row=1, column=0, sticky=W)
+            self.entry1 = tkinter.Entry (self, width=10)
+            self.entry1.grid(row=2, column=0, sticky=W)
+ 
+            self.Q2 = tkinter.Label (self, text='\nDoes a year abroad in Singapore intrest you? (joint degree)').grid(row=5, column=0, sticky=W)
+            self.entry2 = tkinter.Entry (self, width=10)
+            self.entry2.grid(row=6, column=0, sticky=W)
+ 
+            self.Q3 = tkinter.Label (self, text='\Which of the following descriptions intrest you the most?(1-7)').grid(row=8, column=0, sticky=W)
+            self.d1 = tkinter.Label (self, text='\n1) Study of life at the molecular level').grid(row=9, column=0, sticky=W)
+            self.d2 = tkinter.Label (self, text='2) General focus on biology and medicine').grid(row=10, column=0, sticky=W)
+            self.d34 = tkinter.Label (self, text='3) Chemical biology and organic chemistry').grid(row=11, column=0, sticky=W)
+            self.d56 = tkinter.Label (self, text='4) Study of life in all forms with a focus on the cellular level').grid(row=12, column=0, sticky=W)
+            self.d7 = tkinter.Label (self, text='5) Focus on the biology of micro-organisms that are unicellular, multicellular or acellular').grid(row=13, column=0, sticky=W)
+            self.d8 = tkinter.Label (self, text='6) Looks at how macro-molecules like proteins and nucleic acids can help solve biological problems').grid(row=14, column=0, sticky=W)
+            self.d9 = tkinter.Label (self, text='7) Study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively').grid(row=15, column=0, sticky=W)
+            self.entry3 = tkinter.Entry (self, width=10)
+            self.entry3.grid(row=16, column=0, sticky=W)
+ 
+        def click():
+            self.one=self.entry1.get()
+            self.two=self.entry2.get()
+            self.three=self.entry3.get()
+            self.answers.append(one)
+            self.answers.append(two)
+            self.answers.append(three)
+            self.responce = {
+                'Q1':self.answers[0],
+                'Q2':self.answers[1],
+                'Q3':self.answers[2]
+            }
+ 
+if __name__=='__main__':
+    my_app = myApp()
+    my_app.mainloop()
+    
+print(responce)
+        
 
-if responce['Q1'] == 'yes'and responce['Q3'] != '3'and responce['Q3'] !='4':
-    print(ungrd_3.name,'(',ungrd_3.duration,') may be right for you')
-    print(ungrd_5.name,'(',ungrd_5.duration,') may be right for you')
+
+if responce['Q1'] == 'yes'and responce['Q3'] == '3'and responce['Q3'] =='4':
+    print(ungrd_3.name,'(',ungrd_3.duration,') may be the right cource you')
+    print(ungrd_5.name,'(',ungrd_5.duration,') may be the right cource you')
 if responce['Q1'] == 'yes'and responce['Q3'] == '3':
-    print(ungrd_3.name,'(',ungrd_3.duration,') may be right for you')
+    print(ungrd_3.name,'(',ungrd_3.duration,') may be the right cource you')
 if responce['Q1'] == 'yes'and responce['Q3'] == '4':
-    print(ungrd_5.name,'(',ungrd_5.duration,') may be right for you')
+    print(ungrd_5.name,'(',ungrd_5.duration,') may be the right cource you')
 if responce['Q2'] == 'yes':
-    print(ungrd_2.name,'(',ungrd_2.duration,') may be right for you')
+    print(ungrd_2.name,'(',ungrd_2.duration,') may be the right cource you')
 if responce['Q3'] == '1':
-    print(ungrd_1.name, '(',ungrd_1.duration,') may be right for you')
+    print(ungrd_1.name, '(',ungrd_1.duration,') may be the right cource you')
 if responce['Q3'] == '2'and responce['Q2'] == 'no':
-    print(ungrd_2.name, '(',ungrd_2.duration,') may be right for you')
+    print(ungrd_2.name, '(',ungrd_2.duration,') may be the right cource you')
 if responce['Q3'] == '3'and responce['Q1'] == 'no':
-    print(ungrd_4.name, '(',ungrd_4.duration,') may be right for you')
+    print(ungrd_4.name, '(',ungrd_4.duration,') may be the right cource you')
 if responce['Q3'] == '4'and responce['Q1'] == 'no':
-    print(ungrd_6.name, '(',ungrd_6.duration,') may be right for you')
+    print(ungrd_6.name, '(',ungrd_6.duration,') may be the right cource you')
 if responce['Q3'] == '5':
-    print(ungrd_7.name, '(',ungrd_7.duration,') may be right for you')
+    print(ungrd_7.name, '(',ungrd_7.duration,') may be the right cource you')
 if responce['Q3'] == '6':
-    print(ungrd_8.name, '(',ungrd_8.duration,') may be right for you')
+    print(ungrd_8.name, '(',ungrd_8.duration,') may be the right cource you')
 if responce['Q3'] == '7':
-    print(ungrd_9.name, '(',ungrd_9.duration,') may be right for you')
+    print(ungrd_9.name, '(',ungrd_9.duration,') may be the right cource you')
+
+
+
+

@@ -121,7 +121,6 @@ print(responce)
 
 # Tk inter as its own class
 
-# Make your application a class that can then use self to reference all the variables and methods. This is then self contained when run with mainloop()
 import tkinter
 class myApp (tkinter.Tk):
     class undergraduate:
@@ -139,10 +138,10 @@ class myApp (tkinter.Tk):
  
             ]
             self.answers=[]
-        # Even better would be to read this in from a file.
+        
  
             self.title('BSc (Hons) Biological Sciences Degree Finder (Dundee)')
-        #  now set up the buttons etc.
+        
             self.enter_button = tkinter.Button (self, text='ENTER', width=10, command=self.click).grid(row=17, column=0)
  
             self.Q1 = tkinter.Label (self, text='Does a year in industry intrest you?').grid(row=1, column=0, sticky=W)

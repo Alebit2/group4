@@ -119,7 +119,28 @@ print(responce)
 
 
 
+POTENTIAL CODE FOR RESULT		
 
-
-
-
+if responce['Q1'] == 'yes'and responce['Q3'] != '3'and responce['Q3'] !='4':
+    print(ungrd_3.name,'(',ungrd_3.duration,') may be right for you')
+    print(ungrd_5.name,'(',ungrd_5.duration,') may be right for you')
+if responce['Q1'] == 'yes'and responce['Q3'] == '3':
+    print(ungrd_3.name,'(',ungrd_3.duration,') may be right for you')
+if responce['Q1'] == 'yes'and responce['Q3'] == '4':
+    print(ungrd_5.name,'(',ungrd_5.duration,') may be right for you')
+if responce['Q2'] == 'yes':
+    print(ungrd_2.name,'(',ungrd_2.duration,') may be right for you')
+if responce['Q3'] == '1':
+    print(ungrd_1.name, '(',ungrd_1.duration,') may be right for you')
+if responce['Q3'] == '2':
+    print(ungrd_2.name, '(',ungrd_2.duration,') may be right for you')
+if responce['Q3'] == '3'and responce['Q1'] == 'no':
+    print(ungrd_4.name, '(',ungrd_4.duration,') may be right for you')
+if responce['Q3'] == '4'and responce['Q1'] == 'no':
+    print(ungrd_6.name, '(',ungrd_6.duration,') may be right for you')
+if responce['Q3'] == '5':
+    print(ungrd_7.name, '(',ungrd_7.duration,') may be right for you')
+if responce['Q3'] == '6':
+    print(ungrd_8.name, '(',ungrd_8.duration,') may be right for you')
+if responce['Q3'] == '7':
+    print(ungrd_9.name, '(',ungrd_9.duration,') may be right for you')

@@ -2,69 +2,101 @@ BS21010 Assignment 3
 
 Alessandro, Elisabeth, Esma and Raz
 
-CODE FOR CLASSES SET UP:
+careers_1 = {1: 'pharmaceuticals industry', 2: 'biotechnology', 3: 'healthcare industry', 4: 'agricultural industry', 5: 'food industry', 6: 'laboratory work', 7: 'marketing', 8: 'sales', 9: 'management'}
+careers_2 = {1: 'research in universities', 2: 'research institutes and the pharmaceutical industry', 3: 'teaching in schools, colleges and universities', 4: 'graduate entry to a degree in medicine or dentistry', 5: 'government research institutes', 6: 'pharmaceutical, biotechnology & food industries', 7: 'academic research & teaching'}
+careers_3 = {1: 'research and development in the pharmaceutical or biotechnology industries', 2: 'chemical, pharmaceutical or biomedical research in universities or research institutes', 3: 'teaching in further or higher education', 4: 'scientific publishing', 5: 'scientific patenting'}
+careers_4 = {1: 'research and development in the pharmaceutical or biotechnology industries', 2: 'chemical, pharmaceutical or biomedical research in universities or research institutes', 3: 'teaching in further or higher education', 4: 'scientific publishing', 5: 'scientific patenting'}
+careers_5 = {1: 'government research institutes', 2: 'teaching and research in universities', 3: 'teaching in primary and secondary schools', 4: 'the pharmaceutical and food industries', 5: 'conservation bodies'}
+careers_6 = {1: 'government research institutes', 2: 'teaching and research in universities', 3: 'teaching in primary and secondary schools', 4: 'the pharmaceutical and food industries', 5: 'conservation bodies'}
+careers_7 = {1: 'biomedical, genetic, agricultural or ecological research', 2: 'pharmaceuticals, chemicals, cosmetics, food and drink industries', 3: 'management, regulatory affairs, publishing, patent documentation, and the media'}
+careers_8 = {1: 'pharmaceutical, agricultural, food, biotechnology and healthcare industries', 2: 'laboratory work', 3: 'marketing, sales and management areas', 4: 'agricultural, medical and veterinary research institutes', 5: 'scientific Civil Service'}
+careers_9 = {1: 'pharmaceutical, agricultural, food, biotechnology and healthcare industries', 2: 'laboratory work', 3: 'marketing, sales and management areas', 4: 'agricultural, medical and veterinary research institutes', 5: 'scientific Civil Service'}
+#The above 9 dictionaries contain the possible careers linked to each course. 'careers_1' contains the careers for the 'ungrd_1' class instance and so on.
 
-courses_list = [ungrd_1, ungrd_2, ungrd_3, ungrd_4, ungrd_5, ungrd_6, ungrd_7, ungrd_8, ungrd_9]
 class undergraduate:
-    def __init__(self, name, duration, year_in_industry, area_of_expertise, joint_degree, lab_work):
-        """this class contains 6 parameters that define the instance's name, duration, whether or not it includes
+    def __init__(self, course, duration, year_in_industry, area_of_expertise, joint_degree, lab_work, careers):
+        """this class constructor 6 parameters that define the instance's name, duration, whether or not it includes
         a year i industry, which subjects(arguments the course focuses on, whether or not it offers a joint digree
         with another university and whether lab work is included in the course or not"""
-        self.name = name
+        self.course = course
         self.duration = duration
         self.year_in_industry = year_in_industry
         self.area_of_expertise = area_of_expertise
         self.joint_degree = joint_degree
         self.lab_work = lab_work
+        self.careers = careers
+        
     def course_description(self):
-        return '{}, {}, {}, {}, {}, {}'.format(self.name, self.duration, self.year_in_industry, self.area_of_expertise, self.joint_degree, self.lab_work)
-    def printout_names():
+        "this command takes in the name of the instance and returns all of the instance's parameters in order"
+        return '{}, {}, {}, {}, {}, {}, {}'.format(self.course, self.duration, self.year_in_industry, self.area_of_expertise, self.joint_degree, self.lab_work, self.careers)
+	#Feel free to add string text between the brakets if you don't want to just print out a list of all the parameters.
+    
+    def printout_courses():
+        """a 'while loop' is used to print out the name of each course by using a counter that also signifies the number
+        of the item in the list 'courses_list' to take the name from"""
         b=0
         while b<=8:
-            print(courses_list[b].name)
+            print(courses_list[b].course)
             b=b+1
     def printout_duration():
+        "this 'while loop' prints out the duration of all the available courses"
         a=0
         while a<=8:
             print(courses_list[a].duration)
             a=a+1
     def printout_yii():
+        "this 'while loop' prints out whether the course features a year in industry or not"
         c=0
         while c<=8:
             print(courses_list[c].year_in_industry)
             c=c+1
-    def printout_aoe():    
+    def printout_aoe(): 
+        "this 'while loop' prints out the area of expertise of all the available courses"
         d=0
         while d<=8:
             print(courses_list[d].area_of_expertise)
             d=d+1
     def printout_jd():
+        "this 'while loop' prints out whether or not the course includes a joint degree"
         e=0
         while e<=8:
             print(courses_list[e].joint_degree)
             e=e+1
     def printout_lw():
+        "this 'while loop' prints out whether the course includes lab work"
         f=0
         while f<=8:
             print(courses_list[f].lab_work)
             f=f+1
+    def printout_cr():
+        "this 'while loop' prints out the dictionaries (careers_1, for example) associated to each class instance"
+        g=0
+        while g<=8:
+            print(courses_list[g].careers)
+            g=g+1
+#The above 8 methods are all to help with the display of the possible answers. It's not mandatory to use them, but it should help.
     
 
     
-ungrd_1 = undergraduate('Biochemistry', '4 years', 'no years in industry', 'study of life at the molecular level', 'no joint degrees', 'includes lab work')
-ungrd_2 = undergraduate('Biological and Biomedical Sciences', '4 years', 'no years in industry', 'general focus on biology and medicine', 'joint degree with National University of Singapore', 'includes lab work')
-ungrd_3 = undergraduate('Biological chemistry and drug discovery', '5 years', 'includes 1 year in industry', 'chemical biology and organic chemistry', 'no joint degrees', 'includes lab work')
-ungrd_4 = undergraduate('Biological chemistry and drug discovery', '4 years', 'no year in industry', 'chemical biology and organich chemistry', 'no joint degrees', 'includes lab work')
-ungrd_5 = undergraduate('Biological sciences', '5 years', 'includes 1 year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work')
-ungrd_6 = undergraduate('Biological sciences', '4 years', 'no year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work')
-ungrd_7 = undergraduate('Microbiology', '4 years', 'no year in industry', 'focus on the biology of micro-organisms that are unicellular, multicellular or acellular', 'no joint degree', 'includes lab work')
-ungrd_8 = undergraduate('Molecular biology', '4 years', 'no year in industry', 'looks at how macro-molecules like proteins and nucleic acids can help solve biological problems', 'no joint degree', 'includes lab work')
-ungrd_9 = undergraduate('Molecular genetics', '4 years', 'no year in industry', 'study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively', 'no joint degree', 'includes lab work')
+ungrd_1 = undergraduate('Biochemistry', '4 years', 'includes 1 year in industry', 'study of life at the molecular level', 'no joint degrees', 'includes lab work', careers_1)
+ungrd_2 = undergraduate('Biological and Biomedical Sciences', '4 years', 'no years in industry', 'general focus on biology and medicine', 'joint degree with National University of Singapore', 'includes lab work', careers_2)
+ungrd_3 = undergraduate('Biological chemistry and drug discovery', '5 years', 'includes 1 year in industry', 'chemical biology and organic chemistry', 'no joint degrees', 'includes lab work', careers_3)
+ungrd_4 = undergraduate('Biological chemistry and drug discovery', '4 years', 'no year in industry', 'chemical biology and organich chemistry', 'no joint degrees', 'includes lab work', careers_4)
+ungrd_5 = undergraduate('Biological sciences', '5 years', 'includes 1 year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work', careers_5)
+ungrd_6 = undergraduate('Biological sciences', '4 years', 'no year in industry', 'study of life in all forms with a focus on the cellular level', 'no joint degrees', 'includes lab work', careers_6)
+ungrd_7 = undergraduate('Microbiology', '4 years', 'no year in industry', 'focus on the biology of micro-organisms that are unicellular, multicellular or acellular', 'no joint degree', 'includes lab work', careers_7)
+ungrd_8 = undergraduate('Molecular biology', '4 years', 'no year in industry', 'looks at how macro-molecules like proteins and nucleic acids can help solve biological problems', 'no joint degree', 'includes lab work', careers_8)
+ungrd_9 = undergraduate('Molecular genetics', '4 years', 'no year in industry', 'study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively', 'no joint degree', 'includes lab work', careers_9)
 
-#print(ungrd_5.name)
-#print(undergrad_2.joint_degree)
+courses_list = [ungrd_1, ungrd_2, ungrd_3, ungrd_4, ungrd_5, ungrd_6, ungrd_7, ungrd_8, ungrd_9]
+#print(ungrd_5.course)
 #print(undergraduate.course_description(ungrd_1))
-print(undergraduate.printout_lw())
+#print(undergraduate.printout_lw())
+#print(undergraduate.printout_cr())
+#print(ungrd_5.careers)
+#Utilise the commented 'print' commands above to familiarise yourselves with how this chunk of the cod works
+    
+
 
 
 

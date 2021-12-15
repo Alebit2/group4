@@ -93,7 +93,7 @@ Q1 = tkinter.Label (window, text='Does a year in industry intrest you?').grid(ro
 entry1 = tkinter.Entry (window, width=10)
 entry1.grid(row=2, column=0, sticky=W)
 
-Q2 = tkinter.Label (window, text='\nDoes a year abroad in Singapore intrest you? (joint degree)').grid(row=5, column=0, sticky=W)
+Q2 = tkinter.Label (window, text='\nDoes a year abroad intrest you? (joint degree)').grid(row=5, column=0, sticky=W)
 entry2 = tkinter.Entry (window, width=10)
 entry2.grid(row=6, column=0, sticky=W)
 
@@ -105,8 +105,7 @@ d56 = tkinter.Label (window, text='4) Study of life in all forms with a focus on
 d7 = tkinter.Label (window, text='5) Focus on the biology of micro-organisms that are unicellular, multicellular or acellular').grid(row=13, column=0, sticky=W)
 d8 = tkinter.Label (window, text='6) Looks at how macro-molecules like proteins and nucleic acids can help solve biological problems').grid(row=14, column=0, sticky=W)
 d9 = tkinter.Label (window, text='7) Study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively').grid(row=15, column=0, sticky=W)
-entry3 = tkinter.Entry (window, width=10)
-entry3.grid(row=16, column=0, sticky=W)
+entry3 = tkinter.Entry (window, width=10)entry3.grid(row=16, column=0, sticky=W)
 
 window.mainloop()
 

@@ -1,15 +1,14 @@
-
 Alessandro, Elisabeth, Esma and Raz
 
 careers_1 = {1: 'pharmaceuticals industry', 2: 'biotechnology', 3: 'healthcare industry', 4: 'agricultural industry', 5: 'food industry', 6: 'laboratory work', 7: 'marketing', 8: 'sales', 9: 'management'}
-careers_2 = {1: 'research in universities', 2: 'research institutes and the pharmaceutical industry', 3: 'teaching in schools, colleges and universities', 4: 'graduate entry to a degree in medicine or dentistry', 5: 'government research institutes', 6: 'pharmaceutical, biotechnology & food industries', 7: 'academic research & teaching'}
-careers_3 = {1: 'research and development in the pharmaceutical or biotechnology industries', 2: 'chemical, pharmaceutical or biomedical research in universities or research institutes', 3: 'teaching in further or higher education', 4: 'scientific publishing', 5: 'scientific patenting'}
-careers_4 = {1: 'research and development in the pharmaceutical or biotechnology industries', 2: 'chemical, pharmaceutical or biomedical research in universities or research institutes', 3: 'teaching in further or higher education', 4: 'scientific publishing', 5: 'scientific patenting'}
-careers_5 = {1: 'government research institutes', 2: 'teaching and research in universities', 3: 'teaching in primary and secondary schools', 4: 'the pharmaceutical and food industries', 5: 'conservation bodies'}
-careers_6 = {1: 'government research institutes', 2: 'teaching and research in universities', 3: 'teaching in primary and secondary schools', 4: 'the pharmaceutical and food industries', 5: 'conservation bodies'}
-careers_7 = {1: 'biomedical, genetic, agricultural or ecological research', 2: 'pharmaceuticals, chemicals, cosmetics, food and drink industries', 3: 'management, regulatory affairs, publishing, patent documentation, and the media'}
-careers_8 = {1: 'pharmaceutical, agricultural, food, biotechnology and healthcare industries', 2: 'laboratory work', 3: 'marketing, sales and management areas', 4: 'agricultural, medical and veterinary research institutes', 5: 'scientific Civil Service'}
-careers_9 = {1: 'pharmaceutical, agricultural, food, biotechnology and healthcare industries', 2: 'laboratory work', 3: 'marketing, sales and management areas', 4: 'agricultural, medical and veterinary research institutes', 5: 'scientific Civil Service'}
+careers_2 = {1: 'research in universities', 2: 'research institutes and the pharmaceutical industry', 3: 'teaching in schools, colleges and universities', 4: 'graduate entry to a degree in medicine or den$
+careers_3 = {1: 'research and development in the pharmaceutical or biotechnology industries', 2: 'chemical, pharmaceutical or biomedical research in universities or research institutes', 3: 'teaching in f$
+careers_4 = {1: 'research and development in the pharmaceutical or biotechnology industries', 2: 'chemical, pharmaceutical or biomedical research in universities or research institutes', 3: 'teaching in f$
+careers_5 = {1: 'government research institutes', 2: 'teaching and research in universities', 3: 'teaching in primary and secondary schools', 4: 'the pharmaceutical and food industries', 5: 'conservation $
+careers_6 = {1: 'government research institutes', 2: 'teaching and research in universities', 3: 'teaching in primary and secondary schools', 4: 'the pharmaceutical and food industries', 5: 'conservation $
+careers_7 = {1: 'biomedical, genetic, agricultural or ecological research', 2: 'pharmaceuticals, chemicals, cosmetics, food and drink industries', 3: 'management, regulatory affairs, publishing, patent do$
+careers_8 = {1: 'pharmaceutical, agricultural, food, biotechnology and healthcare industries', 2: 'laboratory work', 3: 'marketing, sales and management areas', 4: 'agricultural, medical and veterinary re$
+careers_9 = {1: 'pharmaceutical, agricultural, food, biotechnology and healthcare industries', 2: 'laboratory work', 3: 'marketing, sales and management areas', 4: 'agricultural, medical and veterinary re$
 #The above 9 dictionaries contain the possible careers linked to each course. 'careers_1' contains the careers for the 'ungrd_1' class instance and so on.
 
 

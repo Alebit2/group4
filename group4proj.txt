@@ -237,6 +237,7 @@ class myApp(tkinter.Tk):
                                             'study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively',
                                             'no joint degree', 'includes lab work')
         }
+
         self.answers = []
         
         self.title('BSc (Hons) life Sciences Degree Finder (University of Dundee)')
@@ -290,6 +291,7 @@ class myApp(tkinter.Tk):
             'Q3': self.answers[2],
         }
         print(self.responce)
+ #the code bellow is using 'if' and 'gidancelabel' to match the right course for your chosen answers.
 
         if self.responce['Q1'] == 'yes' and self.responce['Q3'] != '3' and self.responce['Q3'] != '4':
             self.guidance.set['text']=('{} ( {} ) may be the right course for you'.format(

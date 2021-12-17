@@ -298,15 +298,15 @@ class myApp(tkinter.Tk):
  #the code bellow is using 'if' and 'gidancelabel' to match the right course for your chosen answers.
 
         if self.responce['Q1'] == 'yes' and self.responce['Q3'] != '3' and self.responce['Q3'] != '4':
-            self.guidance.set['text']=('{} ( {} ) may be the right course for you'.format(
+            self.guidanceLabel['text']=('{} ( {} ) may be the right course for you'.format(
                 self.courses_list['Biological_Chemistry_and_Drug_Discovery'].name,
                 self.courses_list['Biological_Chemistry_and_Drug_Discovery'].duration))
-            self.guidance.set['text']=('{} ( {} ) may be the right course for you'.format(
+            self.guidanceLable['text']=('{} ( {} ) may be the right course for you'.format(
                 self.courses_list['Biological_Sciences'].name,
                 self.courses_list['Biological_Sciences'].duration))
 
         if self.responce['Q1'] == 'yes' and self.responce['Q3'] == '3':
-            self.guidance.set['text']=('{} ( {} ) may be the right course for you'.format(
+            self.guidanceLabel['text']=('{} ( {} ) may be the right course for you'.format(
                 self.courses_list['Biological_Chemistry_and_Drug_Discovery'].name,
                 self.courses_list['Biological_Chemistry_and_Drug_Discovery'].duration))
 
@@ -316,7 +316,7 @@ class myApp(tkinter.Tk):
             self.courses_list['Biological_Sciences'].duration))
 
         if self.responce['Q2'] == 'yes':
-            self.guidance.set['text']=('{} ( {} ) may be the right course for you'.format(
+            self.guidanceLabel['text']=('{} ( {} ) may be the right course for you'.format(
                 self.courses_list['Biological_and_Biomedical_Sciences'].name,
                 self.courses_list['Biological_and_Biomedical_Sciences'].duration))
 
@@ -326,17 +326,17 @@ class myApp(tkinter.Tk):
             self.courses_list['Biochemistry'].duration))
 
         if self.responce['Q3'] == '2' and self.responce['Q2'] == 'no':
-            self.guidance.set['text']('{} ( {} ) may be the right course for you'.format(
+            self.guidanceLabel['text']('{} ( {} ) may be the right course for you'.format(
                 self.courses_list['Biological_and_Biomedical_Sciences'],
                 'name', self.courses_list['Biological_and_Biomedical_Sciences'].duration))
 
             if self.responce['Q3'] == '3' and self.responce['Q1'] == 'no':
-                self.guidance.set['text']=('{} ( {} ) may be the right course for you'.format(
+                self.guidanceLabel['text']=('{} ( {} ) may be the right course for you'.format(
                     self.courses_list['Biological_Chemistry_and_Drug_Discovery_2'].name,
                     self.courses_list['Biological_Chemistry_and_Drug_Discovery_2'].duration))
 
             if self.responce['Q3'] == '4' and self.responce['Q1'] == 'no':
-                self.guidance.set['text']=('{} ( {} ) may be the right course for you'.format(
+                self.guidanceLabel['text']=('{} ( {} ) may be the right course for you'.format(
                     self.courses_list['Biological_Sciences_2'].name,
                     self.courses_list['Biological_Sciences_2'].duration))
 

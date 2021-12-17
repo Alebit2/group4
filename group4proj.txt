@@ -403,4 +403,220 @@ class myApp (tkinter.Tk):
             while f<=8:
                 print(self.courses_list[f].lab_work)
                 f=f+1
+ #newst code
  
+ import tkinter
+
+
+class undergrad:
+
+    def __init__(self, name, duration, year_in_industry, area_of_expertise, joint_degree, lab_work):
+        """this class contains 6 parameters that define the instance's name, duration, whether or not it includes
+        a year i industry, which subjects(arguments the course focuses on, whether or not it offers a joint digree
+        with another university and whether lab work is included in the course or not"""
+        self.name = name
+        self.duration = duration
+        self.year_in_industry = year_in_industry
+        self.area_of_expertise = area_of_expertise
+        self.joint_degree = joint_degree
+        self.lab_work = lab_work
+
+    def course_description(self):
+        return '{}, {}, {}, {}, {}, {}'.format(self.name, self.duration, self.year_in_i)
+
+
+class myApp(tkinter.Tk):
+
+    def __init__(self):
+        tkinter.Tk.__init__(self)
+        self.courses_list = {
+
+            'Biochemistry': undergrad('Biochemistry', '4 years', 'no years in industry',
+                                      'study of life at the molecular level', 'no joint degrees', 'includes lab work'),
+
+            'Biological_and_Biomedical_Scien': undergrad('Biological and Biomedical Sciences', '4 years',
+                                                         'no years in industry',
+                                                         'general focus on biology and medicine',
+                                                         'joint degree with National University of Singapoore',
+                                                         'includes lab work'),
+
+            'Biological_Chemistry_and_Drug_Discovery': undergrad('Biological chemistry and drug discovery', '5 years',
+                                                                 'includes 1 year in industry',
+                                                                 'chemical biology and organic chemistry',
+                                                                 'no joint degrees', 'includes lab work'),
+
+            'Biological_Chemistry_and_drug_discoverty_2': undergrad('Biological chemistry and drug dicovery', '4 years',
+                                                                    'no year in industry',
+                                                                    'chemical biology and organich chemistry',
+                                                                    'no joint degrees', 'includes lab work'),
+
+            'Bioogical_Scienses': undergrad('Biological sciences', '5 years', 'includes 1 year in industry',
+                                            'study of life in all forms with a focus on the cellular level',
+                                            'no joint degrees', 'includes lab work'),
+
+            'Bioogical_Scienses2': undergrad('Biological sciences', '4 years', 'no year in industry',
+                                             'study of life in all forms with a focus on the cellular level',
+                                             'no joint degrees', 'includes lab work'),
+
+            'Microbiology': undergrad('Microbiology', '4 years', 'no year in industry',
+                                      'focus on the biology of micro-organisms that are unicellular, multicellular or acellular',
+                                      'no joint degree', 'includes lab work'),
+
+            'Molecular_biology': undergrad('Molecular biology', '4 years', 'no year in industry',
+                                           'looks at how macro-molecules like proteins and nucleic acids can help solve biological problems',
+                                           'no joint degree', 'includes lab work'),
+
+            'Molecular_genetics': undergrad('Molecular genetics', '4 years', 'no year in industry',
+                                            'study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively',
+                                            'no joint degree', 'includes lab work')
+        }
+        self.answers = []
+        # Even better would be to read this in from a file.
+        self.title('BSc (Hons) life Sciences Degree Finder (University of Dundee)')
+        #  now set up the buttons etc.
+        self.enter_button = tkinter.Button(self, text='ENTER', width=10, command=self.click).grid(row=17, column=0)
+        self.Q1 = tkinter.Label(self, text='Does a year in industry intrest you?').grid(row=1, column=0, sticky='W')
+        self.entry1 = tkinter.Entry(self, width=10)
+        self.entry1.grid(row=2, column=0, sticky='W')
+        self.Q2 = tkinter.Label(self, text='\nDoes a year abroad in Singapore intrest you? (joint degree)').grid(row=5,
+                                                                                                                 column=0,
+                                                                                                                 sticky='W')
+        self.entry2 = tkinter.Entry(self, width=10)
+        self.entry2.grid(row=6, column=0, sticky='W')
+        self.guidance = tkinter.StringVar(value='Recommendation will appear here')
+        self.guidanceLabel = tkinter.Label(self, textvariable=self.guidance)
+
+        self.Q3 = tkinter.Label(self, text='\Which of the following descriptions intrest you the most?(1-7)').grid(
+            row=8, column=0, sticky='W')
+        self.d1 = tkinter.Label(self, text='\n1) Study of life at the molecular level').grid(row=9, column=0,
+                                                                                             sticky='W')
+        self.d2 = tkinter.Label(self, text='2) General focus on biology and medicine').grid(row=10, column=0,
+                                                                                            sticky='W')
+        self.d34 = tkinter.Label(self, text='3) Chemical biology and organic chemistry').grid(row=11, column=0,
+                                                                                              sticky='W')
+        self.d56 = tkinter.Label(self, text='4) Study of life in all forms with a focus on the cellular level').grid(
+            row=12, column=0, sticky='W')
+        self.d7 = tkinter.Label(self,
+                                text='5) Focus on the biology of micro-organisms that are unicellular, multicellular or acellular').grid(
+            row=13, column=0, sticky='W')
+        self.d8 = tkinter.Label(self,
+                                text='6) Looks at how micro-molecules like proteins and nucleic acids can help solve biological problems').grid(
+            row=14, column=0, sticky='W')
+        self.d9 = tkinter.Label(self,
+                                text='7) Study of genes at a molecular level, from their structure and function to how they pass on information and make sure other processes in cells are regulated effectively').grid(
+            row=15, column=0, sticky='W')
+        self.entry3 = tkinter.Entry(self, width=10)
+        self.entry3.grid(row=16, column=0, sticky='W')
+
+    def click(self):
+        one = self.entry1.get()
+        two = self.entry2.get()
+        three = self.entry3.get()
+        self.answers.append(one)
+        self.answers.append(two)
+        self.answers.append(three)
+        self.responce = {
+            'Q1': self.answers[0],
+            'Q2': self.answers[1],
+            'Q3': self.answers[2],
+        }
+        print(self.responce)
+
+        if self.responce['Q1'] == 'yes' and self.responce['Q3'] == '3' and self.responce['Q3'] == '4':
+            self.guidance.set('{} ( {} ) may be the right course for you'.format(
+                self.courses_list['Biological_Chemistry_and_Drug_Discovery'].name,
+                self.courses_list['Biological_Chemistry_and_Drug_Discover'].dration))
+
+        if self.responce['Q1'] == 'yes' and self.responce['Q3'] == '3':
+            self.guidance.set('{} ( {} ) may be the right course for you'.format(
+                self.courses_list['Biological_Chemistry_and_Drug_Discover'].name,
+                self.courses_list['Biological_Chemistry_and_Drug_Discover'].duration))
+
+        if self.responce['Q1'] == 'yes' and self.responce['Q3'] == '4':
+            self.guidance.set(
+                '{} ( {} ) may be the right course for you'.format(self.courses_list['Bioogical_Scienses'].name,
+                                                                   self.courses_list[
+                                                                       'Bioogical_Scienses'].duration))
+
+        if self.responce['Q2'] == 'yes':
+            self.guidance.set('{} ( {} ) may be the right course for you'.format(
+                self.courses_list['Biological_and_Biomedical_Scien'].name,
+                self.courses_list['Biological_and_Biomedical_Scien'].duration))
+
+        if self.responce['Q3'] == '1':
+            self.guidance.set(
+                '{} ( {} ) may be the right course for you'.format(self.courses_list['Biochemistry'].name,
+                                                                   self.courses_list['Biochemistry'].duration))
+
+        if self.responce['Q3'] == '2' and self.responce['Q2'] == 'no':
+            self.guidance.set('{} ( {} ) may be the right course for you'.format(
+                self.courses_list['Biological and Biomedical Sciences'],
+                name, self.courses_list['Biological and Biomedical Sciences'].duration))
+
+            if self.responce['Q3'] == '3' and self.responce['Q1'] == 'no':
+                self.guidance.set('{} ( {} ) may be the right course for you'.format(
+                    self.courses_list['Biological_Chemistry_and_drug_discoverty_2'].name,
+                    self.courses_list['Biological_Chemistry_and_drug_discoverty_2'].duration))
+
+            if self.responce['Q3'] == '4' and self.responce['Q1'] == 'no':
+                self.guidance.set('{} ( {} ) may be the right course for you'.format(
+                    self.courses_list['Biological sciences2'].name,
+                    self.courses_list['Biological sciences2'].duration))
+
+            if self.responce['Q3'] == '5':
+                self.guidance.set(
+                    '{} ( {} ) may be the right course for you'.format(self.courses_list['Microbiology'].name,
+                                                                       self.courses_list['Microbiology'].duration))
+
+            if self.responce['Q3'] == '6':
+                self.guidance.set(
+                    '{} ( {} ) may be the right course for you'.format(self.courses_list['Molecular_biology'].name,
+                                                                       self.courses_list[
+                                                                           'Molecular_biology'].duration))
+
+            if self.responce['Q3'] == '7':
+                self.guidance.set(
+                    '{} ( {} ) may be the right course for you'.format(self.courses_list['Molecular genetics'].name,
+                                                                       self.courses_list[
+                                                                           'Molecular genetics'].duration))
+
+    def printout_names(self):
+        b = 0
+        while b <= 8:
+            print(self.courses_list[b].name)
+            b = b + 1
+
+    def printout_duration(self):
+        a = 0
+        while a <= 8:
+            print(self.courses_list[a].duration)
+            a = a + 1
+
+    def printout_yii(self):
+        c = 0
+        while c <= 8:
+            print(self.courses_list[c].year_in_industry)
+            c = c + 1
+
+    def printout_aoe(self):
+        d = 0
+        while d <= 8:
+            print(self.courses_list[d].area_of_expertise)
+            d = d + 1
+
+    def printout_jd(self):
+        e = 0
+        while e <= 8:
+            print(self.courses_list[e].joint_degree)
+            e = e + 1
+
+    def printout_lw(self):
+        f = 0
+        while f <= 8:
+            print(self.courses_list[f].lab_work)
+            f = f + 1
+
+
+if __name__ == '__main__':
+    app = myApp()
+    app.mainloop()

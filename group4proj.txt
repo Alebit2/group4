@@ -191,7 +191,7 @@ class undergrad:
     def course_description(self):
         return '{}, {}, {}, {}, {}, {}'.format(self.name, self.duration, self.year_in_i)
 
-
+# all the undergraduate courses are put in dictionary with extra information about them 
 class myApp(tkinter.Tk):
 
     def __init__(self):
@@ -239,6 +239,8 @@ class myApp(tkinter.Tk):
         }
 
         self.answers = []
+	# the code bellow is the three questions which will be asked the user when taking the test. for this we cahe used Tkinter .
+
         
         self.title('BSc (Hons) life Sciences Degree Finder (University of Dundee)')
         
@@ -290,6 +292,8 @@ class myApp(tkinter.Tk):
             'Q2': self.answers[1],
             'Q3': self.answers[2],
         }
+	
+	# after answering the questions which will appear on a different tab your answers will be shown on the console and the recomended course should come up on the bottom of the tab with the questions.
         print(self.responce)
  #the code bellow is using 'if' and 'gidancelabel' to match the right course for your chosen answers.
 
